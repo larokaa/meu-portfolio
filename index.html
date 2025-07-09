@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio</title>
+  <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  
+
+</head>
+<body>
+
+    <div class="menu-toggle">☰</div>
+     <nav class="menu">
+    <ul>
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#sobre">Sobre mim</a></li>
+      <li><a href="#Habilidades">Habilidades</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+<header class="hero" id="inicio">
+  <video autoplay muted loop playsinline class="bg-video">
+    <source src="images/323-135992580.mp4" type="video/mp4">
+    Seu navegador não suporta vídeos em HTML5.
+  </video>
+
+  <div class="conteudo-container">
+    <h2>Olá 👋, meu nome é </h2>
+    <h1>Bruno Laroca</h1>
+    <p>Boas vindas ao meu Portfolio 🚀</p> 
+
+    <!-- Seta para próxima seção (sobre) -->
+    <button class="scroll-btn seta" data-target="sobre">
+      <i class="fas fa-chevron-down"></i>
+    </button>
+  </div>
+</header>
+<!-- SOBRE -->
+<section id="sobre">
+  <div class="sobre-container">
+    <img src="images/WhatsApp Image 2025-07-03 at 15.19.17.jpeg" alt="foto pessoal" class="foto-pessoal">
+
+    <div class="sobre-texto">
+      <h2>Esse sou eu</h2>
+      <p><strong>Um front-end developer</strong> iniciando minha jornada na programação</p>
+      <p><strong>📍Ponta Grossa - PR </strong><br>
+        Aluno de <strong>Análise e Desenvolvimento de Sistemas</strong> na Unicesumar. <br>
+        Estudando <strong>JavaScript</strong> e <strong>TypeScript</strong> com base sólida em <strong>HTML</strong> e <strong>CSS</strong>. <br><br>
+        Embora sem experiência profissional, busco aprender e crescer como desenvolvedor. Aberto a estágios, projetos freelancers e experiências práticas.
+      </p>
+      <p><strong>Veja mais sobre minha formação e experiências no currículo.</strong></p>
+
+      <a href="docs/CV bruno laroca rosa (2).pdf" target="_blank" class="btn-curriculo">
+        <i class="fas fa-file-alt"></i> Meu Currículo
+      </a>
+    </div>
+  </div>
+
+  <!-- Seta para próxima seção (habilidades) -->
+  <button class="scroll-btn seta" data-target="Habilidades">
+    <i class="fas fa-chevron-down"></i>
+  </button>
+</section>
+
+<!-- HABILIDADES -->
+<section id="Habilidades">
+  <h2>Minhas habilidades</h2>
+  <div class="habilidades-container">
+    <div class="habilidade-card">
+      <i class="fab fa-html5 icon"></i>
+      <h3>HTML</h3>
+      <p>Tenho uma base sólida em HTML5, criando estruturas de página bem organizadas e semânticas, com foco em acessibilidade, SEO e boas práticas de desenvolvimento..</p>
+    </div>
+    <div class="habilidade-card">
+      <i class="fab fa-css3-alt icon"></i>
+      <h3>CSS</h3>
+      <p>Utilizo CSS3 para desenvolver layouts modernos e responsivos, aplicando conceitos de design, organização visual e experiência do usuário em diferentes tamanhos de tela.</p>
+    </div>
+    <div class="habilidade-card">
+      <i class="fab fa-js icon"></i>
+      <h3>JavaScript</h3>
+      <p>Com JavaScript, dou vida às páginas através da manipulação do DOM e lógica de programação. Estou sempre praticando para criar interações mais dinâmicas e funcionais.</p>
+    </div>
+    <div class="habilidade-card">
+      <i class="fas fa-code icon"></i>
+      <h3>TypeScript</h3>
+      <p>Tenho estudado TypeScript para desenvolver aplicações com mais segurança e previsibilidade, aproveitando os recursos de tipagem e organização do código.</p>
+    </div>
+    <div class="habilidade-card">
+      <i class="fab fa-git-alt icon"></i>
+      <h3>Git</h3>
+      <p>Utilizo Git para versionar meus projetos e o GitHub como plataforma de colaboração, controle de mudanças e compartilhamento do meu progresso como desenvolvedor.</p>
+    </div>
+  </div>
+
+  <!-- Seta para próxima seção (contato) -->
+  <button class="scroll-btn seta" data-target="contato">
+    <i class="fas fa-chevron-down"></i>
+  </button>
+</section>
+
+<!-- CONTATO -->
+<section id="contato">
+  <div class="trabalhe-container">
+    <div class="trabalhe-texto">
+      <h2>Entre em Contato:</h2>
+      <p>Estou disponivel a oportunidades de colaboração, estágios, freelas ou participação em projetos que desafiem minha criatividade e fortaleçam minhas habilidades. <br> <br>
+
+Se você tem uma ideia, precisa de um desenvolvedor ou quer apenas trocar uma ideia sobre tecnologia, é só me mandar uma mensagem aqui ou pelas redes sociais. Vai ser um prazer conversar com você!.</p>
+    </div>
+
+    <form action="https://formspree.io/f/xzzgwnpo" method="POST" class="formulario-contato">
+      <input type="text" name="name" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="message" placeholder="Sua mensagem" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.scroll-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const section = document.getElementById(targetId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+
+
+</body>
